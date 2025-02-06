@@ -3,4 +3,4 @@ streamlit
 torch
 torchvision
 torchaudio
-pencv-python-headless
+cv2

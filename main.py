@@ -29,7 +29,7 @@ if uploaded_file:
     elif file_type == 'video':
         tfile = tempfile.NamedTemporaryFile(delete=False)  
         tfile.write(uploaded_file.read())
-        
+    
         cap = cv2.VideoCapture(tfile.name)
         output_frames = []
         while cap.isOpened():
@@ -41,13 +41,21 @@ if uploaded_file:
             output_frames.append(annotated_frame)
 
         cap.release()
-        output_path = "output_video.mp4"
-        out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), 20, 
-                              (output_frames[0].shape[1], output_frames[0].shape[0]))
 
+        output_path = os.path.join(tempfile.gettempdir(), "output_video.mp4")
+        out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), 20, 
+                          (output_frames[0].shape[1], output_frames[0].shape[0]))
         for frame in output_frames:
             out.write(frame)
         out.release()
-        st.video(output_path)
+
+
+        with open(output_path, "rb") as video_file:
+            st.download_button(
+                label="Download Processed Video",
+                data=video_file,
+                file_name="output_video.mp4",
+                mime="video/mp4"
+            )
 
         os.remove(tfile.name)

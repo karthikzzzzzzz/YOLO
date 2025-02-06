@@ -1,4 +1,4 @@
-ultralytics==8.0.100
+ultralytics
 streamlit
 torch
 torchvision

@@ -3,4 +3,4 @@ streamlit
 torch
 torchvision
 torchaudio
-pencv-python-headless==4.8.0.76
+pencv-python-headless

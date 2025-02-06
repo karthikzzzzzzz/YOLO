@@ -1,6 +1,8 @@
-ultralytics
-streamlit
 torch
 torchvision
 torchaudio
-cv2
+streamlit
+ultralytics
+opencv-python-headless
+pillow
+numpy

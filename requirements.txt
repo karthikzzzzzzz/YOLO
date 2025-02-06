@@ -1,7 +1,7 @@
 torch
 torchvision
 torchaudio
-ultralytics==8.0.73
+ultralytics
 opencv-python-headless==4.8.0.74
 pillow==10.0.0
 numpy

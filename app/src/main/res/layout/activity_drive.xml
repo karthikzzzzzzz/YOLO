@@ -1,0 +1,55 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/blue"
+    android:padding="16dp">
+
+    <!-- App Title -->
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/hel"
+        android:layout_height="wrap_content"
+        android:text="Back">
+
+    </Button>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMOOTH RIDE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingTop="16dp"/>
+
+    <!-- Drive Mode Heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DRIVE 101"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:padding="8dp"/>
+
+    <!-- Drive Mode Image -->
+    <ImageView
+        android:id="@+id/driveImage"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:contentDescription="Drive Mode Image"
+        android:scaleType="fitCenter" />
+
+    <!-- Status Message -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connecting to server..."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:padding="16dp"/>
+</LinearLayout>
